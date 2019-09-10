@@ -80,33 +80,6 @@
      <string notr="true"/>
     </property>
    </widget>
-   <widget class="QPushButton" name="butt11">
-    <property name="geometry">
-     <rect>
-      <x>80</x>
-      <y>10</y>
-      <width>161</width>
-      <height>161</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>FreeSans</family>
-      <pointsize>179</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string notr="true"/>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>12</width>
-      <height>12</height>
-     </size>
-    </property>
-   </widget>
    <widget class="QPushButton" name="butt23">
     <property name="geometry">
      <rect>
@@ -206,9 +179,9 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>170</y>
+      <y>240</y>
       <width>61</width>
-      <height>21</height>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
@@ -216,17 +189,20 @@
       <pointsize>20</pointsize>
      </font>
     </property>
+    <property name="lineWidth">
+     <number>2</number>
+    </property>
     <property name="text">
-     <string>PLAY!</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="player2">
     <property name="geometry">
      <rect>
       <x>610</x>
-      <y>170</y>
+      <y>240</y>
       <width>61</width>
-      <height>21</height>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
@@ -234,8 +210,30 @@
       <pointsize>20</pointsize>
      </font>
     </property>
+    <property name="lineWidth">
+     <number>2</number>
+    </property>
     <property name="text">
-     <string>PLAY!</string>
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="butt11">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>10</y>
+      <width>161</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>FreeSans</family>
+      <pointsize>179</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string notr="true"/>
     </property>
    </widget>
   </widget>
@@ -253,7 +251,6 @@
      <string>Menu</string>
     </property>
     <addaction name="actionNew_Game"/>
-    <addaction name="actionExit"/>
    </widget>
    <addaction name="menuMenu"/>
   </widget>

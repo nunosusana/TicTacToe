@@ -19,8 +19,10 @@ public:
 private:
     Ui::TicTacToe *ui;
     short CheckTable();
+    void DisableTable();
 
 private slots:
     void MakeMove();
+    void on_actionNew_Game_triggered();
 };
 #endif // TICTACTOE_H

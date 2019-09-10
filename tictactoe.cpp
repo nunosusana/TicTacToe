@@ -63,11 +63,35 @@ void TicTacToe::MakeMove(){
     player=(player==1?2:1);
     short winner = CheckTable();
     if(winner!=0){
+        DisableTable();
         if(winner==1){
-            ui->player1->setText("WINNER");
+            ui->player1->setText(QString("YOU\nWIN"));
         }else{
-            ui->player2->setText("WINNER");
+            ui->player2->setText(QString("YOU\nWIN"));
         }
     }
+}
+
+void TicTacToe::DisableTable(){
+    for(int i = 1; i <= 3; ++i){
+        for(int j = 1; j <= 3; ++j){
+            QString butName = "butt"+QString::number(i)+QString::number(j);
+            TicTacToe::findChild<QPushButton *>(butName)->setEnabled(false);
+        }
+    }
+}
+
+void TicTacToe::on_actionNew_Game_triggered(){
+    player=1;
+    for(int i = 1; i <= 3; ++i){
+        for(int j = 1; j <= 3; ++j){
+            QString butName = "butt"+QString::number(i)+QString::number(j);
+            TicTacToe::findChild<QPushButton *>(butName)->setText(QString(" "));
+            TicTacToe::findChild<QPushButton *>(butName)->setEnabled(true);
+            tab[i-1][j-1]=0;
+        }
+    }
+    ui->player1->setText(QString(" "));
+    ui->player2->setText(QString(" "));
 }
 
